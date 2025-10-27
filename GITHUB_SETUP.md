@@ -27,8 +27,8 @@ git add .
 # Commit
 git commit -m "Initial commit: Cosmic Whiskers - A purr-fect space odyssey 🚀😸"
 
-# Add remote (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/cosmic-whiskers.git
+# Add remote (replace mohideenhajamohideen with your GitHub username)
+git remote add origin https://github.com/mohideenhajamohideen/cosmic-whiskers.git
 
 # Push to main branch
 git branch -M main
@@ -130,6 +130,6 @@ After pushing to GitHub:
 ---
 
 **Your repo URL will be:**
-`https://github.com/YOUR_USERNAME/cosmic-whiskers`
+`https://github.com/mohideenhajamohideen/cosmic-whiskers`
 
 Good luck! 🚀😸✨

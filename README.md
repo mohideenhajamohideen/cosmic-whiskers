@@ -21,7 +21,7 @@ An endless space flyer where you guide Luna, an adorable space cat, through cosm
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/YOUR_USERNAME/cosmic-whiskers.git
+git clone https://github.com/mohideenhajamohideen/cosmic-whiskers.git
 cd cosmic-whiskers
 npm install
 
@@ -128,7 +128,7 @@ npm run deploy
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/cosmic-whiskers.git
+git clone https://github.com/mohideenhajamohideen/cosmic-whiskers.git
 cd cosmic-whiskers
 
 # Install dependencies
@@ -404,7 +404,7 @@ Built for the Reddit Community Games 2025 Hackathon
 
 ## 🔗 Links
 
-- **GitHub Repository:** [github.com/YOUR_USERNAME/cosmic-whiskers](https://github.com/YOUR_USERNAME/cosmic-whiskers)
+- **GitHub Repository:** [github.com/mohideenhajamohideen/cosmic-whiskers](https://github.com/mohideenhajamohideen/cosmic-whiskers)
 - **App Listing:** [developers.reddit.com/apps/cosmic-whiskrs](https://developers.reddit.com/apps/cosmic-whiskrs)
 - **Demo Subreddit:** [r/cosmic_whskrs](https://www.reddit.com/r/cosmic_whskrs/)
 - **Demo Video:** [YouTube Link](https://youtube.com/watch?v=...) *(To be added)*

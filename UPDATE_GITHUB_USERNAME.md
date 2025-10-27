@@ -5,10 +5,10 @@ After you push to GitHub, run this command to update all documentation with your
 ## Quick Update
 
 ```bash
-# Replace YOUR_USERNAME with your actual GitHub username
+# Replace mohideenhajamohideen with your actual GitHub username
 # For example, if your username is "johndoe":
 
-find . -type f \( -name "*.md" -o -name "*.json" \) -not -path "*/node_modules/*" -not -path "*/dist/*" -exec sed -i '' 's/YOUR_USERNAME/johndoe/g' {} +
+find . -type f \( -name "*.md" -o -name "*.json" \) -not -path "*/node_modules/*" -not -path "*/dist/*" -exec sed -i '' 's/mohideenhajamohideen/johndoe/g' {} +
 
 # Then commit the changes
 git add .
@@ -21,8 +21,8 @@ git push
 Or manually replace in these files:
 
 1. **README.md**
-   - Line with: `git clone https://github.com/YOUR_USERNAME/cosmic-whiskers.git`
-   - Line with: `**GitHub Repository:** [github.com/YOUR_USERNAME/cosmic-whiskers]`
+   - Line with: `git clone https://github.com/mohideenhajamohideen/cosmic-whiskers.git`
+   - Line with: `**GitHub Repository:** [github.com/mohideenhajamohideen/cosmic-whiskers]`
 
 2. **HACKATHON_SUBMISSION.md**
    - Repository URL section
@@ -36,7 +36,7 @@ If your GitHub username is `mohideen123`:
 
 **Before:**
 ```
-https://github.com/YOUR_USERNAME/cosmic-whiskers
+https://github.com/mohideenhajamohideen/cosmic-whiskers
 ```
 
 **After:**

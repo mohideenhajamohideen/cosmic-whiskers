@@ -17,6 +17,29 @@ An endless space flyer where you guide Luna, an adorable space cat, through cosm
 
 ---
 
+## ⚡ Quick Start
+
+```bash
+# 1. Clone and install
+git clone https://github.com/YOUR_USERNAME/cosmic-whiskers.git
+cd cosmic-whiskers
+npm install
+
+# 2. Login to Reddit
+npm run login
+
+# 3. Deploy to Reddit
+npm run deploy
+
+# 4. Install in your subreddit
+# Go to: https://developers.reddit.com/apps/cosmic-whiskrs
+# Click "Install" and select your subreddit
+```
+
+**Full deployment guide:** [DEPLOY_TO_REDDIT.md](./DEPLOY_TO_REDDIT.md)
+
+---
+
 ## 🎮 How to Play
 
 1. **Tap to Start** - Luna hovers in space, waiting for your first input
@@ -105,11 +128,14 @@ An endless space flyer where you guide Luna, an adorable space cat, through cosm
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cosmic-whiskers.git
-cd crowd-clash
+git clone https://github.com/YOUR_USERNAME/cosmic-whiskers.git
+cd cosmic-whiskers
 
 # Install dependencies
 npm install
+
+# Login to Reddit/Devvit
+npm run login
 
 # Start development server
 npm run dev
@@ -124,18 +150,20 @@ The dev server runs three processes:
 
 Visit the playtest URL shown in the terminal to test your changes.
 
-### Building
+### Deploying to Reddit
 
 ```bash
 # Build for production
 npm run build
 
-# Deploy to Reddit
+# Deploy to Reddit (uploads to cosmic-whiskrs app)
 npm run deploy
 
-# Publish to Reddit
+# Full publish workflow (build + deploy + publish)
 npm run launch
 ```
+
+**See [DEPLOY_TO_REDDIT.md](./DEPLOY_TO_REDDIT.md) for detailed deployment instructions.**
 
 ---
 
@@ -376,11 +404,12 @@ Built for the Reddit Community Games 2025 Hackathon
 
 ## 🔗 Links
 
-- **Demo Subreddit:** [r/cosmic_whiskers](https://www.reddit.com/r/cosmic_whiskers/)
-- **App Listing:** [developers.reddit.com/apps/cosmic-whiskers](https://developers.reddit.com/apps/cosmic-whiskers)
-- **GitHub Repository:** [github.com/yourusername/cosmic-whiskers](https://github.com/yourusername/cosmic-whiskers)
-- **Demo Video:** [YouTube Link](https://youtube.com/watch?v=...)
-- **Kiro Writeup:** [HACKATHON_SUBMISSION.md](./HACKATHON_SUBMISSION.md)
+- **GitHub Repository:** [github.com/YOUR_USERNAME/cosmic-whiskers](https://github.com/YOUR_USERNAME/cosmic-whiskers)
+- **App Listing:** [developers.reddit.com/apps/cosmic-whiskrs](https://developers.reddit.com/apps/cosmic-whiskrs)
+- **Demo Subreddit:** [r/cosmic_whskrs](https://www.reddit.com/r/cosmic_whskrs/)
+- **Demo Video:** [YouTube Link](https://youtube.com/watch?v=...) *(To be added)*
+- **Kiro Documentation:** [HACKATHON_SUBMISSION.md](./HACKATHON_SUBMISSION.md)
+- **Deployment Guide:** [DEPLOY_TO_REDDIT.md](./DEPLOY_TO_REDDIT.md)
 
 ---
 
@@ -406,6 +435,22 @@ None! The game is polished and ready for launch. 🎉
 - More cosmic themes
 - Power-ups and abilities
 - Global leaderboards
+
+---
+
+## ⚙️ Configuration
+
+**Reddit App Name:** `cosmic-whiskrs`  
+**App URL:** https://developers.reddit.com/apps/cosmic-whiskrs  
+**Dev Subreddit:** `r/cosmic_whskrs_dev`
+
+The app name is configured in `devvit.json`. When you deploy with `npm run deploy`, your code uploads to the "cosmic-whiskrs" app on Reddit's Developer Platform.
+
+---
+
+## 📝 License
+
+MIT License - See [LICENSE](./LICENSE) for details
 
 ---
 

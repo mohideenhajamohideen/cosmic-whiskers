@@ -1,0 +1,75 @@
+=== BANNER IMAGE PROMPT (1920x384px) ===
+
+Create a wide horizontal banner image (1920x384px) for "Cosmic Whiskers" - a space-themed mobile game.
+
+Style: Vibrant, playful, cosmic aesthetic with a purple-pink nebula background
+
+Main Elements:
+- A cute orange tabby cat astronaut wearing a transparent space helmet and blue jetpack, positioned on the left side
+- The cat should have a happy, adventurous expression with big eyes
+- Floating in deep space with a purple and pink nebula background
+- Scattered glowing stars and sparkles throughout
+- 2-3 small satellites floating in the background (satellite dish, solar panel satellite, space station)
+- Cosmic rings or hoops visible in the distance
+- A small planet (pink or orange) in the background
+- Gradient from deep purple to pink across the nebula
+
+Text: "COSMIC WHISKERS" in bold, playful font on the right side with a glow effect
+
+Color Palette:
+- Deep purple (#6B21A8)
+- Hot pink (#EC4899)
+- Orange (#FB923C) for the cat
+- Blue (#60A5FA) for the jetpack
+- Gold (#FCD34D) for stars and accents
+
+Mood: Fun, adventurous, cute, space exploration, casual gaming
+
+Art Style: Modern digital illustration, slightly cartoonish but polished, suitable for a mobile game
+
+=== END BANNER PROMPT ===
+
+
+=== ICON IMAGE PROMPT (512x512px) ===
+
+Create a square app icon (512x512px) for "Cosmic Whiskers" - a space-themed mobile game.
+
+Style: Simple, bold, instantly recognizable icon suitable for mobile app stores
+
+Main Elements:
+- Close-up of a cute orange tabby cat's face with a transparent space helmet
+- The cat should have large, expressive eyes looking slightly upward
+- Happy, friendly expression (use the grinning cat emoji 😸 as inspiration)
+- Transparent bubble helmet with a subtle shine/reflection
+- Deep space background with purple-pink nebula
+- A few small stars or sparkles around the edges
+- Simple and clean composition that works at small sizes
+
+Color Palette:
+- Orange (#FB923C) for the cat
+- Light blue (#93C5FD) for the helmet
+- Deep purple to pink gradient background (#6B21A8 to #EC4899)
+- White/gold sparkles
+
+Requirements:
+- Must be clear and recognizable at small sizes (64x64px)
+- Bold, simple shapes
+- High contrast
+- No text
+- Rounded corners friendly
+- Professional game icon quality
+
+Mood: Cute, friendly, space adventure, approachable
+
+Art Style: Clean vector-style illustration, bold outlines, suitable for app icon
+
+=== END ICON PROMPT ===
+
+
+INSTRUCTIONS:
+1. Copy the BANNER prompt and paste into ChatGPT
+2. Generate and download the banner image
+3. Copy the ICON prompt and paste into ChatGPT
+4. Generate and download the icon image
+5. Save as banner.png and icon.png
+6. Add to cosmic-whiskers/assets/ folder

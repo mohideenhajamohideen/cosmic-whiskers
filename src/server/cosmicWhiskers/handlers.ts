@@ -1,6 +1,9 @@
 // Flappy Cat Server Handlers
 import { Devvit } from '@devvit/public-api';
 import { THEMES } from '../../shared/cosmicWhiskersConstants';
+import { getRedditUsername } from './redditIntegration.js';
+import { getCommunityStats, updateCommunityStats } from './communityHandlers.js';
+import type { LeaderboardData, CommunityStats } from '../../shared/types/cosmicWhiskers.js';
 
 const REDIS_KEYS = {
   leaderboard: (themeId: number) => `flappycat:leaderboard:${themeId}`,
@@ -14,7 +17,7 @@ export async function submitScore(
   userId: string,
   themeId: number,
   score: number
-): Promise<{ success: boolean; unlockedThemes?: number[]; cumulativeScore: number }> {
+): Promise<{ success: boolean; unlockedThemes?: number[]; cumulativeScore: number; communityStats?: CommunityStats }> {
   try {
     const redis = context.redis;
 
@@ -42,7 +45,11 @@ export async function submitScore(
 
       // Update leaderboard
       const leaderboardKey = REDIS_KEYS.leaderboard(themeId);
+      console.log(`Adding score to leaderboard: ${leaderboardKey}, user: ${userId}, score: ${score}`);
       await redis.zAdd(leaderboardKey, { member: userId, score });
+      console.log(`Score added successfully`);
+    } else {
+      console.log(`Score ${score} not higher than current high score ${currentHighScore}, not updating leaderboard`);
     }
 
     // Check for theme unlocks
@@ -58,7 +65,13 @@ export async function submitScore(
       }
     }
 
-    return { success: true, unlockedThemes, cumulativeScore: newCumulative };
+    // Update community stats after successful score save
+    await updateCommunityStats(context, userId, score);
+
+    // Get updated community stats to return
+    const communityStats = await getCommunityStats(context);
+
+    return { success: true, unlockedThemes, cumulativeScore: newCumulative, communityStats };
   } catch (error) {
     console.error('Error submitting score:', error);
     return { success: false, cumulativeScore: 0 };
@@ -70,38 +83,47 @@ export async function getLeaderboard(
   context: Devvit.Context,
   themeId: number,
   userId: string
-): Promise<{
-  entries: Array<{ username: string; score: number; rank: number }>;
-  playerRank: number;
-  playerScore: number;
-}> {
+): Promise<LeaderboardData> {
   try {
     const redis = context.redis;
     const leaderboardKey = REDIS_KEYS.leaderboard(themeId);
 
+    console.log(`Fetching leaderboard for theme ${themeId}, key: ${leaderboardKey}`);
+
     // Get top 10 scores
     const topScores = await redis.zRange(leaderboardKey, 0, 9, { reverse: true, by: 'rank' });
+    
+    console.log(`Found ${topScores.length} leaderboard entries:`, topScores);
 
-    // Get usernames
+    // Fetch Reddit usernames for top 10 players
     const entries = await Promise.all(
       topScores.map(async (entry, index) => {
-        const username = entry.member;
+        const playerId = entry.member;
+        const username = await getRedditUsername(context, playerId);
+        
         return {
-          username,
+          username: `u/${username}`,
           score: entry.score,
           rank: index + 1,
+          isCurrentUser: playerId === userId,
         };
       })
     );
 
-    // Get player's rank and score
-    const playerRank = await redis.zRank(leaderboardKey, userId, { reverse: true });
+    // Get player's rank and score (using zRevRank for reverse order)
+    const playerRank = await redis.zRevRank(leaderboardKey, userId);
     const playerScoreData = await redis.zScore(leaderboardKey, userId);
+
+    console.log(`Player rank: ${playerRank}, score: ${playerScoreData}`);
+
+    // Include community stats in leaderboard response
+    const communityStats = await getCommunityStats(context);
 
     return {
       entries,
       playerRank: playerRank !== undefined ? playerRank + 1 : 0,
       playerScore: playerScoreData || 0,
+      communityStats,
     };
   } catch (error) {
     console.error('Error getting leaderboard:', error);
@@ -109,6 +131,13 @@ export async function getLeaderboard(
       entries: [],
       playerRank: 0,
       playerScore: 0,
+      communityStats: {
+        totalPlayers: 0,
+        totalRingsPassed: 0,
+        averageScore: 0,
+        topScore: 0,
+        milestones: [],
+      },
     };
   }
 }

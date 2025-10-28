@@ -73,3 +73,123 @@ INSTRUCTIONS:
 4. Generate and download the icon image
 5. Save as banner.png and icon.png
 6. Add to cosmic-whiskers/assets/ folder
+
+
+=== SPLASH SCREEN BACKGROUND IMAGE PROMPT (1200x1600px) ===
+
+Create a vertical splash screen background image (1200x1600px) for "Cosmic Whiskers" - a space-themed mobile game.
+
+Style: Immersive, cinematic space scene with a dreamy, magical atmosphere
+
+Main Elements:
+- Deep space cosmic background with a beautiful purple-to-pink nebula gradient
+- Luna the orange tabby cat astronaut floating gracefully in the center-upper portion
+  * Wearing a transparent bubble space helmet with subtle reflections
+  * Blue jetpack with soft glow
+  * Peaceful, adventurous expression with big expressive eyes
+  * Slight motion blur on the jetpack flames for dynamic feel
+- Multiple glowing cosmic rings scattered throughout the scene at various depths
+  * Purple and pink glowing rings with particle effects
+  * Some rings closer (larger), some farther (smaller) for depth
+  * Soft glow and shimmer effects on the rings
+- Distant planets in the background:
+  * One large pink/purple planet with subtle surface details
+  * One smaller orange planet
+  * Rings around one of the planets
+- Scattered stars of varying sizes and brightness
+- Shooting stars or meteor trails
+- Soft nebula clouds with purple, pink, and blue hues
+- Subtle lens flare effects from distant stars
+- Particle effects: stardust, sparkles, and cosmic dust floating throughout
+
+Color Palette:
+- Deep space purple (#0F0A2E, #1A0F4D)
+- Vibrant nebula pink (#EC4899, #F472B6)
+- Cosmic purple (#8B5CF6, #C084FC)
+- Orange cat (#FB923C)
+- Blue jetpack (#60A5FA)
+- Gold/white stars (#FCD34D, #FFFFFF)
+- Cyan accents (#22D3EE)
+
+Composition:
+- Vertical orientation (portrait)
+- Luna positioned in upper-center area (leave space at bottom for text overlay)
+- Depth of field effect: sharp focus on Luna, slightly blurred background
+- Dramatic lighting from behind Luna creating a rim light effect
+- Bottom third should be slightly darker/less busy for text readability
+
+Mood: Epic, adventurous, magical, wonder, exploration, heartwarming
+
+Art Style: High-quality digital illustration, cinematic game art, polished and professional, suitable for a premium mobile game splash screen
+
+Technical Requirements:
+- 1200x1600px (portrait orientation)
+- High resolution for crisp display on mobile devices
+- Bottom 400px should have space for text overlay (darker gradient)
+- No text or UI elements (will be added programmatically)
+- PNG format with no transparency
+
+=== END SPLASH SCREEN BACKGROUND PROMPT ===
+
+
+=== APP ICON IMAGE PROMPT (512x512px) ===
+
+Create a square app icon (512x512px) for "Cosmic Whiskers" - a space-themed mobile game.
+
+Style: Bold, iconic, instantly recognizable at small sizes
+
+Main Elements:
+- Close-up portrait of Luna the orange tabby cat in her space helmet
+- Transparent bubble helmet with a bright shine/reflection on the upper right
+- Luna's face fills most of the frame with big, expressive eyes looking slightly upward
+- Happy, determined expression (inspired by 😸 emoji)
+- Whiskers visible through the helmet
+- Small blue jetpack visible at the bottom edge
+- Deep space background with purple-pink nebula gradient
+- 2-3 bright stars or sparkles strategically placed
+- Subtle cosmic ring visible in the background (out of focus)
+
+Color Palette:
+- Orange tabby cat (#FB923C, #F97316)
+- Light blue helmet with shine (#93C5FD, #DBEAFE)
+- Deep purple to hot pink gradient background (#6B21A8 to #EC4899)
+- White/gold sparkles (#FFFFFF, #FCD34D)
+- Blue jetpack accent (#3B82F6)
+
+Composition:
+- Centered, symmetrical composition
+- Cat's face takes up 70% of the icon
+- High contrast for visibility at small sizes
+- Bold outlines around key elements
+- Rounded corners (iOS style)
+
+Technical Requirements:
+- 512x512px square
+- Must be clear and recognizable at 64x64px
+- Bold, simple shapes with high contrast
+- No text
+- Professional app store quality
+- PNG format with transparency or solid background
+
+Mood: Cute, friendly, adventurous, premium quality
+
+Art Style: Clean, polished vector-style illustration with subtle gradients, professional mobile game icon
+
+=== END APP ICON PROMPT ===
+
+
+UPDATED INSTRUCTIONS:
+1. Copy the SPLASH SCREEN BACKGROUND prompt and paste into ChatGPT/DALL-E
+2. Generate and download as 'splash-background.png'
+3. Copy the APP ICON prompt and paste into ChatGPT/DALL-E
+4. Generate and download as 'app-icon.png'
+5. Copy the BANNER prompt (above) and generate as 'banner.png'
+6. Copy the original ICON prompt (above) and generate as 'icon.png'
+7. Place all images in cosmic-whiskers/assets/ folder
+
+FILE NAMING:
+- splash-background.png (1200x1600px) - For splash screen
+- app-icon.png (512x512px) - For app icon in splash screen
+- banner.png (1920x384px) - For promotional use
+- icon.png (512x512px) - Alternative icon design
+

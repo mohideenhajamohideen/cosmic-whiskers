@@ -115,6 +115,66 @@ export class AudioManager {
     osc.stop(now + 0.3);
   }
 
+  // Play milestone celebration sound
+  public playMilestoneCelebration() {
+    if (!this.audioContext || this.isMuted) return;
+    this.resume();
+
+    const now = this.audioContext.currentTime;
+    
+    // Play a triumphant fanfare with multiple notes
+    const fanfare = [
+      { freq: 523.25, time: 0 },     // C5
+      { freq: 659.25, time: 0.15 },  // E5
+      { freq: 783.99, time: 0.3 },   // G5
+      { freq: 1046.5, time: 0.45 },  // C6
+      { freq: 1046.5, time: 0.6 },   // C6 (hold)
+      { freq: 1046.5, time: 0.75 },  // C6 (hold)
+    ];
+
+    fanfare.forEach(({ freq, time }) => {
+      const osc = this.audioContext!.createOscillator();
+      const gain = this.audioContext!.createGain();
+
+      osc.connect(gain);
+      gain.connect(this.sfxGain!);
+
+      osc.frequency.value = freq;
+      osc.type = 'sine';
+      
+      const startTime = now + time;
+      gain.gain.setValueAtTime(0.3, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, startTime + 0.4);
+
+      osc.start(startTime);
+      osc.stop(startTime + 0.4);
+    });
+
+    // Add a sparkle effect
+    setTimeout(() => {
+      if (this.isMuted) return;
+      
+      for (let i = 0; i < 5; i++) {
+        const osc = this.audioContext!.createOscillator();
+        const gain = this.audioContext!.createGain();
+
+        osc.connect(gain);
+        gain.connect(this.sfxGain!);
+
+        const freq = 1500 + Math.random() * 1000;
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        
+        const startTime = this.audioContext!.currentTime + (i * 0.05);
+        gain.gain.setValueAtTime(0.15, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, startTime + 0.2);
+
+        osc.start(startTime);
+        osc.stop(startTime + 0.2);
+      }
+    }, 800);
+  }
+
   // Play ambient space music (looping)
   public startAmbientMusic() {
     if (!this.audioContext || this.isMuted || !this.musicEnabled) return;

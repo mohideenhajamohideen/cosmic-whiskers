@@ -1,4 +1,4 @@
-// Flappy Cat Game Constants
+// Cosmic Whiskers Game Constants
 import { Theme } from './types/cosmicWhiskers';
 
 export const GAME_CONFIG = {
@@ -71,7 +71,7 @@ export const THEMES: Theme[] = [
   {
     id: 2,
     name: 'Nebula Dreams',
-    unlockScore: 50,
+    unlockScore: 10,
     story: {
       title: '💫 Chapter 2: The Pink Nebula',
       description:
@@ -96,7 +96,7 @@ export const THEMES: Theme[] = [
   {
     id: 3,
     name: 'Asteroid Belt',
-    unlockScore: 150,
+    unlockScore: 20,
     story: {
       title: '☄️ Chapter 3: Memories in the Rocks',
       description:
@@ -121,7 +121,7 @@ export const THEMES: Theme[] = [
   {
     id: 4,
     name: 'Starlight Path',
-    unlockScore: 300,
+    unlockScore: 30,
     story: {
       title: '⭐ Chapter 4: Mother\'s Guidance',
       description: 'Luna remembers! Her mother taught her to follow the golden starlight path when lost. The stars shine brighter than ever, forming a glowing trail through the cosmos. She can almost hear her mother\'s purr. Home is near, Luna can feel it!',
@@ -144,7 +144,7 @@ export const THEMES: Theme[] = [
   {
     id: 5,
     name: "Galaxy's Edge",
-    unlockScore: 500,
+    unlockScore: 40,
     story: {
       title: '🌠 Chapter 5: Voices in the Void',
       description: "At the galaxy's edge, where reality bends and stars dance, Luna hears them! Familiar meows echo through the cosmic void. Her family is calling! The cyan rings pulse with energy, creating a bridge between worlds. Just a little further, brave Luna!",
@@ -168,7 +168,7 @@ export const THEMES: Theme[] = [
   {
     id: 6,
     name: 'Home Sweet Home',
-    unlockScore: 800,
+    unlockScore: 50,
     story: {
       title: '🏠 Chapter 6: Together Again',
       description:
@@ -189,5 +189,50 @@ export const THEMES: Theme[] = [
       planetImage: 'home-planet',
       specialEffect: 'lightRays',
     },
+  },
+];
+
+export const COMMUNITY_MILESTONES = [
+  {
+    id: '1000rings',
+    threshold: 1000,
+    title: 'First Thousand! 🎉',
+    description: 'The community has passed 1,000 cosmic rings together!',
+    achieved: false,
+  },
+  {
+    id: '10000rings',
+    threshold: 10000,
+    title: 'Ten Thousand Strong! 🚀',
+    description: 'Amazing! 10,000 rings passed by our space explorers!',
+    achieved: false,
+  },
+  {
+    id: '50000rings',
+    threshold: 50000,
+    title: 'Cosmic Legends! ✨',
+    description: '50,000 rings! Luna is proud of this amazing community!',
+    achieved: false,
+  },
+  {
+    id: '100players',
+    threshold: 100,
+    title: 'Growing Fleet! 👥',
+    description: "100 brave pilots have joined Luna's adventure!",
+    achieved: false,
+  },
+  {
+    id: '1000players',
+    threshold: 1000,
+    title: 'Massive Community! 🌟',
+    description: '1,000 players helping Luna find her way home!',
+    achieved: false,
+  },
+  {
+    id: '5000players',
+    threshold: 5000,
+    title: 'Galactic Family! 🌌',
+    description: '5,000 space explorers united in this cosmic journey!',
+    achieved: false,
   },
 ];

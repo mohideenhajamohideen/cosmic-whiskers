@@ -10,18 +10,18 @@ export const createPost = async () => {
     splash: {
       // Splash Screen Configuration
       appDisplayName: 'Cosmic Whiskers',
-      backgroundUri: 'default-splash.png',
-      buttonLabel: '🚀 START ADVENTURE 🚀',
-      description: 'A purr-fect space odyssey! Guide Luna the space cat through cosmic rings.',
+      backgroundUri: 'splash-background.png', // Place your custom splash image in assets/
+      buttonLabel: '🚀 Start Adventure',
+      description: 'Help Luna the space cat find her family! Navigate through cosmic rings in this purr-fect space odyssey.',
       entryUri: 'index.html',
-      heading: '😸✨ COSMIC WHISKERS - Space Adventure! ✨😸',
-      appIconUri: 'default-icon.png',
+      heading: 'Cosmic Whiskers',
+      appIconUri: 'app-icon.png', // Place your app icon in assets/
     },
     postData: {
       battleId: '',
       theme: 'Space Adventure',
     },
     subredditName: subredditName,
-    title: '🚀 COSMIC WHISKERS - A Purr-fect Space Odyssey! Guide Luna through the cosmos! 😸✨',
+    title: '🐱 Cosmic Whiskers - Help Luna Find Her Family! 🌌',
   });
 };

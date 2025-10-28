@@ -75,16 +75,69 @@ export interface ScoreSubmissionResult {
   success: boolean;
   unlockedThemes?: number[];
   cumulativeScore: number;
+  communityStats?: CommunityStats;
+  error?: string;
+  code?: string;
+}
+
+export interface CommunityMilestone {
+  id: string;
+  threshold: number;
+  title: string;
+  description: string;
+  achieved: boolean;
+  achievedAt?: number;
+}
+
+export interface CommunityStats {
+  totalPlayers: number;
+  totalRingsPassed: number;
+  averageScore: number;
+  topScore: number;
+  milestones: CommunityMilestone[];
 }
 
 export interface LeaderboardEntry {
   username: string;
   score: number;
   rank: number;
+  isCurrentUser: boolean;
 }
 
 export interface LeaderboardData {
   entries: LeaderboardEntry[];
   playerRank: number;
   playerScore: number;
+  communityStats: CommunityStats;
+  error?: string;
+  code?: string;
+  cached?: boolean;
+}
+
+export interface CurrentUserResponse {
+  id: string;
+  username: string;
+  error?: string;
+  code?: string;
+}
+
+export interface CommunityStatsResponse extends CommunityStats {
+  error?: string;
+  code?: string;
+  cached?: boolean;
+}
+
+export interface ProgressResponse {
+  cumulativeScore: number;
+  unlockedThemes: number[];
+  themeScores: Record<number, number>;
+  error?: string;
+  code?: string;
+}
+
+export interface ErrorResponse {
+  success: false;
+  error: string;
+  code: 'NETWORK_ERROR' | 'VALIDATION_ERROR' | 'SERVER_ERROR' | 'RATE_LIMIT';
+  retryable: boolean;
 }

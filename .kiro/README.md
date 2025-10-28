@@ -7,10 +7,15 @@ This folder contains the complete Kiro-driven development workflow used to build
 ```
 .kiro/
 ├── specs/                          # Feature specifications
-│   └── community-features/         # Community play features spec
-│       ├── requirements.md         # EARS-formatted requirements
-│       ├── design.md              # Detailed design document
-│       └── tasks.md               # Granular implementation tasks
+│   ├── cosmic-whiskers/           # Original game spec
+│   │   ├── requirements.md        # Core game requirements
+│   │   ├── design.md             # Game architecture & design
+│   │   └── tasks.md              # Game implementation tasks
+│   │
+│   └── community-features/        # Community play features spec
+│       ├── requirements.md        # EARS-formatted requirements
+│       ├── design.md             # Detailed design document
+│       └── tasks.md              # Granular implementation tasks
 │
 ├── steering/                       # Development guidelines
 │   ├── judging-criteria.md        # Hackathon judging criteria
@@ -25,20 +30,36 @@ This folder contains the complete Kiro-driven development workflow used to build
 
 ## 🎯 Spec-Driven Development Workflow
 
-### 1. Requirements (requirements.md)
+### Two Complete Feature Specs Included:
+
+#### 1. Cosmic Whiskers (Original Game)
+The complete spec for the core game mechanics, themes, and gameplay.
+- **Requirements:** 15+ user stories with EARS-formatted acceptance criteria
+- **Design:** Game engine architecture, rendering pipeline, physics system
+- **Tasks:** 20+ implementation tasks from setup to polish
+
+#### 2. Community Features
+The spec for multiplayer and community engagement features.
+- **Requirements:** Community play, leaderboards, milestones, Reddit integration
+- **Design:** Community stats tracking, milestone system, Reddit API integration
+- **Tasks:** 10+ tasks for implementing community features
+
+### Spec Structure:
+
+#### 1. Requirements (requirements.md)
 - Written using EARS (Easy Approach to Requirements Syntax)
 - Each requirement follows strict patterns (WHEN/WHILE/IF/WHERE)
 - Includes user stories with acceptance criteria
 - Fully traceable to implementation
 
-### 2. Design (design.md)
+#### 2. Design (design.md)
 - Comprehensive architecture documentation
 - Component interfaces and data models
 - Error handling strategies
 - Testing approach
 - Based directly on requirements
 
-### 3. Tasks (tasks.md)
+#### 3. Tasks (tasks.md)
 - Granular, actionable implementation steps
 - Each task references specific requirements
 - Organized hierarchically with sub-tasks

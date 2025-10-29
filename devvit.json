@@ -1,6 +1,10 @@
 {
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
   "name": "cosmic-whiskrs",
+  "slug": "cosmic-whiskrs",
+  "version": "0.0.22",
+  "description": "Cosmic Whiskers is a playful community game built for the Reddit Devvit Hackathon. Players collect cosmic cats and share their achievements through subreddit posts. All activity stays within the community and follows Reddit’s content rules.",
+  "author": "u/Parking_Code4274",
   "post": {
     "dir": "dist/client",
     "entrypoints": {
@@ -31,6 +35,6 @@
     "onAppInstall": "/internal/on-app-install"
   },
   "dev": {
-    "subreddit": "cosmic_whiskrs_dev"
+    "subreddit": "cosmic_whiskrs"
   }
 }

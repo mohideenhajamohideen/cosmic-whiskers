@@ -4,9 +4,9 @@
 
 **Submission for:** Reddit Community Games 2025 Hackathon  
 **Categories:** Community Play + Best Kiro Developer Experience ($10,000)  
-**Repository:** [Your GitHub URL]  
-**Demo Post:** [Your Reddit Demo Post URL]  
-**App Listing:** [developers.reddit.com/apps/cosmic-whiskers]
+**Repository:** (https://github.com/mohideenhajamohideen/cosmic-whiskers/)
+**Demo Post:** (https://www.reddit.com/r/cosmic_whskrs/comments/1oijtnz/cosmic_whiskers_help_luna_find_her_family/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+**App Listing:** [[developers.reddit.com/apps/cosmic-whiskrs](https://developers.reddit.com/apps/cosmic-whiskrs)]
 
 ---
 

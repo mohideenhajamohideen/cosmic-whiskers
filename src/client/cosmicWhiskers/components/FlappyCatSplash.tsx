@@ -28,8 +28,8 @@ export const CosmicWhiskersSplash: React.FC<CosmicWhiskersSplashProps> = ({
       <div className="text-center px-8 max-w-2xl">
         {/* Game Title */}
         <div className="mb-8">
-          <div className="text-8xl mb-4 animate-bounce">🐱</div>
-          <h1 className="text-7xl font-bold text-white mb-2 drop-shadow-2xl">Flappy Cat</h1>
+          <div className="text-8xl mb-4 animate-bounce">😸</div>
+          <h1 className="text-7xl font-bold text-white mb-2 drop-shadow-2xl">Cosmic Whiskers</h1>
           <p className="text-2xl text-white/80 italic">Luna's Journey Home</p>
         </div>
 

@@ -277,9 +277,9 @@ export const CosmicWhiskersApp: React.FC = () => {
             <UsernameDisplay username={username} position="top-right" />
             
             <div className="max-w-md w-full text-center my-auto space-y-3 md:space-y-4">
-              <div className="text-4xl md:text-6xl mb-2 md:mb-4 animate-bounce">🐱</div>
+              <div className="text-4xl md:text-6xl mb-2 md:mb-4 animate-bounce">😸</div>
               <h1 className="text-3xl md:text-6xl font-bold text-white mb-2 md:mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Flappy Cat
+                Cosmic Whiskers
               </h1>
               <p className="text-sm md:text-xl text-white/90 mb-3 md:mb-6">
                 Help Luna find her family!
